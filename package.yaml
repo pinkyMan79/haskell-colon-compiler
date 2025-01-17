@@ -21,6 +21,7 @@ description:         Please see the README on GitHub at <https://github.com/gith
 
 dependencies:
 - base >= 4.7 && < 5
+- mtl ^>= 2.2.2
 
 ghc-options:
 - -Wall
@@ -35,6 +36,8 @@ ghc-options:
 
 library:
   source-dirs: src
+  dependencies:
+    - mtl
 
 executables:
   co-comp-exe:
@@ -46,6 +49,7 @@ executables:
     - -with-rtsopts=-N
     dependencies:
     - co-comp
+    - mtl
 
 tests:
   co-comp-test:
